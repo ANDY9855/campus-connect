@@ -2203,7 +2203,10 @@ function renderFeedbackPage(content) {
         </div>
       </div>
     </section>
-
+    
+   
+  
+  `;
 
   // Initialize feedback page functionality
   setTimeout(() => {

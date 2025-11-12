@@ -476,7 +476,7 @@ function renderHomePage(content) {
             <div class="testimonial-text">
               Finally, one hub for all college events. As an organizer, I love how easy it is for students to discover our events.
             </div>
-            <div class="testimonial-author">Prof. Zakuta</div>
+            <div class="testimonial-author">Prof. Ahmed</div>
             <div class="testimonial-role">Cultural Committee Head</div>
           </div>
           

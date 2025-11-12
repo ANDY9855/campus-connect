@@ -474,7 +474,7 @@ function renderHomePage(content) {
           
           <div class="testimonial-card fade-in-up" style="animation-delay: 0.2s">
             <div class="testimonial-text">
-              Finally, one hub for all college events. As an organizer, I love how easy it is for students to discover our events.
+              CampusConnect made organizing events so much easier! I love how effortlessly students can find and engage with our activities.
             </div>
             <div class="testimonial-author">Prof. Ahmed</div>
             <div class="testimonial-role">Cultural Committee Head</div>

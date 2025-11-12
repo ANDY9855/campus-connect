@@ -3183,14 +3183,14 @@ let carouselInterval;
 
 function initializeCarousel() {
   // Start automatic slideshow
-  carouselInterval = setInterval(nextSlide, 2000);
+  carouselInterval = setInterval(nextSlide, 5000);
   
   // Pause on hover
   const carousel = document.querySelector('.hero-carousel');
   if (carousel) {
     carousel.addEventListener('mouseenter', () => clearInterval(carouselInterval));
     carousel.addEventListener('mouseleave', () => {
-      carouselInterval = setInterval(nextSlide, 2000);
+      carouselInterval = setInterval(nextSlide, 5000);
     });
   }
 }

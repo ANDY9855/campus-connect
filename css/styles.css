@@ -48,6 +48,7 @@
   --font-size-3xl: 2.5rem;
   --font-size-4xl: 3rem;
 }
+
 /* ========== CRITICAL TESTIMONIALS BACKGROUND FIX - HIGHEST PRIORITY ========== */
 body {
   overflow-x: hidden;
@@ -1877,163 +1878,203 @@ textarea.form-control {
 /* -------------------------------------------------
    Event Categories Section – NEW CLASS NAMES
    ------------------------------------------------- */
-   .categories-section {
-    padding: 5rem 0;
-    background: linear-gradient(135deg, #0c0c0c 0%, #121212 50%, #1e1e1e 100%);
-    position: relative;
-  }
-  
-  .categories-section::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background:
-      radial-gradient(circle at 30% 40%, rgba(36, 207, 166, 0.08) 0%, transparent 50%),
-      radial-gradient(circle at 70% 80%, rgba(0, 132, 255, 0.08) 0%, transparent 50%);
-    pointer-events: none;
-  }
-  
-  /* ---------- Card base ---------- */
-  .category-cards {
-    background: #1D1D1D;
-    border-radius: 1.5rem;
-    padding: 2.5rem 1.5rem;
-    text-align: center;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
-    border: 1px solid #3c3c3c;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    position: relative;
-    overflow: hidden;
-    backdrop-filter: blur(10px);
-    display: flex;
-    flex-direction: column;
-  }
-  
-  /* Title */
-  .category-cards h3 {
-    color: #e9e9e9;
-    margin-bottom: 1rem;
-  }
-  
-  /* Description (sub-category) */
-  .category-cards .subcategory p {
-    color: #ffffff;
-    margin: 0;
-    padding: 1.5rem 0rem;
+.categories-section {
+  padding: 5rem 0;
+  background: linear-gradient(135deg, #0c0c0c 0%, #121212 50%, #1e1e1e 100%);
+  position: relative;
+}
 
-  }
-  
-  /* Accent bar that slides in from the left */
-  .category-cards::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background: var(--category-color, #4f46e5);
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.3s ease;
-  }
-  .category-cards:hover::before {
-    transform: scaleX(1);
-  }
-  
-  /* Hover lift + scale */
-  .category-cards:hover {
-    transform: translateY(-10px) scale(1.02);
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
-    border-color: rgba(36, 207, 166, 0.3);
-  }
-  
-  /* ---------- Icon (inside curtain) ---------- */
-  .category-icons {
-    font-size: 4rem;
-    margin-bottom: 1.5rem;
-    display: block;
-    animation: floatr 3s ease-in-out infinite;
-    --wave-delay: 1s;
-    }
-    
-    .category-cards:nth-child(1) .category-icons { animation-delay: calc(0 * var(--wave-delay)) !important;}
-    .category-cards:nth-child(2) .category-icons { animation-delay: calc(1 * var(--wave-delay)) !important;}
-    .category-cards:nth-child(3) .category-icons { animation-delay: calc(2 * var(--wave-delay)) !important;}
-    .category-cards:nth-child(4) .category-icons { animation-delay: calc(3 * var(--wave-delay)) !important;}
-  
-  /* ---------- Curtain (icon + title) ---------- */
-  .category-cards .curtain {
-    position: relative;
-    background: inherit;               /* keep card bg */
-    padding: 2rem 1rem;
-    transition: transform 0.35s ease;
-    z-index: 2;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  /* ---------- Sub-category reveal ---------- */
-  .category-cards .subcategory {
-    position: absolute;
-    inset: 0;
-    background: inherit;
-    padding: 1.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.35s ease, visibility 0.35s ease;
-    z-index: 1;
-  }
-  
-  /* Hover – slide curtain up, show sub-category */
-  .category-cards:hover .curtain {
-    transform: translateY(-200%);
-  }
-  .category-cards:hover .subcategory {
-    opacity: 1;
-    visibility: visible;
-  }
-  
-  /* -------------------------------------------------
+.categories-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 30% 40%, rgba(36, 207, 166, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 70% 80%, rgba(0, 132, 255, 0.08) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+/* ---------- Card base ---------- */
+.category-cards {
+  background: #1D1D1D;
+  border-radius: 1.5rem;
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+  border: 1px solid #3c3c3c;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Title */
+.category-cards h3 {
+  color: #e9e9e9;
+  margin-bottom: 1rem;
+}
+
+/* Description (sub-category) */
+.category-cards .subcategory p {
+  color: #ffffff;
+  margin: 0;
+  padding: 1.5rem 0rem;
+
+}
+
+/* Accent bar that slides in from the left */
+.category-cards::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--category-color, #4f46e5);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.category-cards:hover::before {
+  transform: scaleX(1);
+}
+
+/* Hover lift + scale */
+.category-cards:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+  border-color: rgba(36, 207, 166, 0.3);
+}
+
+/* ---------- Icon (inside curtain) ---------- */
+.category-icons {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+  display: block;
+  animation: floatr 3s ease-in-out infinite;
+  --wave-delay: 1s;
+}
+
+.category-cards:nth-child(1) .category-icons {
+  animation-delay: calc(0 * var(--wave-delay)) !important;
+}
+
+.category-cards:nth-child(2) .category-icons {
+  animation-delay: calc(1 * var(--wave-delay)) !important;
+}
+
+.category-cards:nth-child(3) .category-icons {
+  animation-delay: calc(2 * var(--wave-delay)) !important;
+}
+
+.category-cards:nth-child(4) .category-icons {
+  animation-delay: calc(3 * var(--wave-delay)) !important;
+}
+
+/* ---------- Curtain (icon + title) ---------- */
+.category-cards .curtain {
+  position: relative;
+  background: inherit;
+  /* keep card bg */
+  padding: 2rem 1rem;
+  transition: transform 0.35s ease;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ---------- Sub-category reveal ---------- */
+.category-cards .subcategory {
+  position: absolute;
+  inset: 0;
+  background: inherit;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.35s ease, visibility 0.35s ease;
+  z-index: 1;
+}
+
+/* Hover – slide curtain up, show sub-category */
+.category-cards:hover .curtain {
+  transform: translateY(-200%);
+}
+
+.category-cards:hover .subcategory {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* -------------------------------------------------
      Category-specific colours
      ------------------------------------------------- */
-  .category-cards.technical   { --category-color: #24cfa6; }
-  .category-cards.cultural    { --category-color: #0084FF; }
-  .category-cards.sports      { --category-color: #24cfa6; }
-  .category-cards.departmental{ --category-color: #0084FF; }
-  
-  .category-cards.technical:hover,
-  .category-cards.sports:hover {
-    background: linear-gradient(135deg, rgba(36, 207, 166, 0.1), #1D1D1D);
-  }
-  .category-cards.cultural:hover,
-  .category-cards.departmental:hover {
-    background: linear-gradient(135deg, rgba(0, 132, 255, 0.1), #1D1D1D);
-  }
-  
-  /* -------------------------------------------------
+.category-cards.technical {
+  --category-color: #24cfa6;
+  text-decoration: none !important;
+}
+
+.category-cards.cultural {
+  --category-color: #0084FF;
+  text-decoration: none !important;
+}
+
+.category-cards.sports {
+  --category-color: #24cfa6;
+  text-decoration: none !important;
+}
+
+.category-cards.departmental {
+  --category-color: #0084FF;
+  text-decoration: none !important;
+}
+
+.category-cards.technical:hover,
+.category-cards.sports:hover {
+  background: linear-gradient(135deg, rgba(36, 207, 166, 0.1), #1D1D1D);
+}
+
+.category-cards.cultural:hover,
+.category-cards.departmental:hover {
+  background: linear-gradient(135deg, rgba(0, 132, 255, 0.1), #1D1D1D);
+}
+
+/* -------------------------------------------------
      Floating animation (same as before)
      ------------------------------------------------- */
-  @keyframes floatr {
-    0% { transform: translateY(0); }
-    50%      { transform: translateY(-10px); }
-    100% {transform: translateY(0);}
+@keyframes floatr {
+  0% {
+    transform: translateY(0);
   }
-  
-  /* -------------------------------------------------
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* -------------------------------------------------
      Grid container (new plural name)
      ------------------------------------------------- */
-  .grids {
-    display: grid;
-    gap: 2rem;
-  }
-  .grids-4 {
-    grid-template-columns: repeat(4, 1fr);
-  }
-  /* -------------------------------------------------
+.grids {
+  display: grid;
+  gap: 2rem;
+}
+
+.grids-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* -------------------------------------------------
    Responsive Grid for Category Cards
    ------------------------------------------------- */
 
@@ -2063,17 +2104,26 @@ textarea.form-control {
     grid-template-columns: repeat(4, minmax(250px, 1fr));
   }
 }
-  /* -------------------------------------------------
+
+/* -------------------------------------------------
      Fade-in animation (new plural name)
      ------------------------------------------------- */
-  .fade-in-ups {
+.fade-in-ups {
+  opacity: 0;
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+@keyframes fadeInUp {
+  from {
     opacity: 0;
-    animation: fadeInUp 0.6s ease forwards;
+    transform: translateY(30px);
   }
-  @keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(30px); }
-    to   { opacity: 1; transform: translateY(0); }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
+}
 
 /* Subcategory List – Match Student Council Card Style */
 .subcategory-content {
@@ -2084,7 +2134,8 @@ textarea.form-control {
 }
 
 .subcategory-intro {
-  color: #00D4FF;                    /* Bright cyan like in image */
+  color: #00D4FF;
+  /* Bright cyan like in image */
   font-size: 1rem;
   font-weight: 600;
   margin: 0 0 1rem 0;
@@ -2096,7 +2147,8 @@ textarea.form-control {
   list-style: none;
   padding: 0;
   margin: 0;
-  color: #c9c9c9;                    /* Light gray text */
+  color: #c9c9c9;
+  /* Light gray text */
   font-size: 0.95rem;
   line-height: 1.8;
 }
@@ -2110,7 +2162,8 @@ textarea.form-control {
 
 .subcategory-list li::before {
   content: '•';
-  color: #00D4FF;                    /* Teal bullet */
+  color: #00D4FF;
+  /* Teal bullet */
   position: absolute;
   left: 0;
   font-weight: bold;
@@ -3491,7 +3544,7 @@ section.testimonials-section {
 .event-description {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  /* gap: 2rem; */
 }
 
 .event-main-info {
@@ -6447,7 +6500,8 @@ section.testimonials-section {
 /* Event highlights and description styling */
 .event-description .info-card {
   line-height: 1.7;
-  margin-bottom: 2rem;
+  /* margin-bottom: 2rem; */
+  margin-top: 1.5rem;
 }
 
 .event-description .info-card>div {
@@ -7836,8 +7890,8 @@ section.testimonials-section {
     /* grid-template-columns: repeat(2, 1fr); */
     display: flex;
     flex-direction: column;
-        text-align: center;
-        align-items: center;
+    text-align: center;
+    align-items: center;
   }
 
   .contact-cards-grid.student-grid {
@@ -7882,6 +7936,7 @@ section.testimonials-section {
   backdrop-filter: blur(20px) !important;
   border: 1px solid var(--border-color) !important;
   color: var(--text-primary) !important;
+  margin-top: 1.5rem;
 }
 
 .info-card h3 {
@@ -7918,6 +7973,7 @@ section.testimonials-section {
   background: linear-gradient(135deg, rgba(16, 185, 129, 0.2), rgba(52, 211, 153, 0.2)) !important;
   backdrop-filter: blur(20px) !important;
   border: 1px solid rgba(16, 185, 129, 0.3) !important;
+  margin-bottom: 1.5rem;
 }
 
 .contact-card h4,
@@ -8063,9 +8119,10 @@ section.testimonials-section {
   color: #fff;
 }
 
-.contact-hero-content{
+.contact-hero-content {
   text-align: center;
 }
-.college-info-card{
+
+.college-info-card {
   text-align: center;
 }

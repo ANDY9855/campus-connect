@@ -2771,15 +2771,16 @@ function renderContactPage(content) {
           <div class="map-card fade-in-up">
             <h2>Find Us on Map</h2>
             <div class="map-container">
-              <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3618.152233850977!2d67.03217337358457!3d24.926883342599822!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33f90157042d3%3A0x93d609e8bec9a880!2sAptech%20Computer%20Education%20North%20Nazimabad%20Center!5e0!3m2!1sen!2s!4v1762851718319!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-                width="100%"
-                height="300"
-                style="border:0; border-radius: 12px;"
-                allowfullscreen="" 
-                loading="lazy" 
-                referrerpolicy="no-referrer-when-downgrade">
-              </iframe>
+     <iframe
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3618.152233850977!2d67.03217337358457!3d24.926883342599822!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33f90157042d3%3A0x93d609e8bec9a880!2sAptech%20Computer%20Education%20North%20Nazimabad%20Center!5e0!3m2!1sen!2s!4v1762851718319!5m2!1sen!2s"
+  width="100%"
+  height="300"
+  style="border:0; border-radius: 12px;"
+  allowfullscreen=""
+  loading="lazy"
+  referrerpolicy="no-referrer-when-downgrade"
+  title="Google Map showing Aptech Computer Education North Nazimabad Center">
+</iframe>
             </div>
           </div>
         </div>
